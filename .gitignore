@@ -23,5 +23,4 @@ dist-ssr
 /example
 vite.config.ts.js
 *.bak
-*.lock
 lib

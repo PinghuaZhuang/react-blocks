@@ -9,6 +9,8 @@
   "scripts": {
     "build": "lerna run build --scope @zstark/**",
     "build:example": "lerna run build:example --scope @zstark/**",
+    "doc:build": "vitdoc build",
+    "doc:dev": "vitdoc --port=5601",
     "postinstall": "patch-package",
     "lint": "lint-staged",
     "prepare": "husky install",
@@ -24,8 +26,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
     "@ant-design/icons": "^4.7.0",
@@ -52,6 +54,7 @@
     "terser": "^5.14.2",
     "tslib": "^2.4.0",
     "typescript": "^4.6.4",
+    "vitdoc": "^1.0.14",
     "vite": "2.8.6",
     "vite-plugin-dts": "1.0.3",
     "vite-plugin-style-import": "^2.0.0"
