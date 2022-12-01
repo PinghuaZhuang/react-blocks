@@ -2,13 +2,19 @@
   "name": "@zstark/react-resizable",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "./lib/index.umd.js",
-  "module": "./lib/index.es.js",
+  "exports": {
+    ".": {
+      "main": "./lib/index.umd.js",
+      "module": "./lib/index.es.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./core": "./lib/core.js"
+  },
   "types": "./lib/index.d.ts",
   "scripts": {
     "build": "vite build --config ../../../vite.config.packages.js",
     "build:example": "cross-env VITE_ENV=example vite build --emptyOutDir --config ../../../vite.config.packages.js",
-    "dev": "cross-env VITE_ENV=example vite",
+    "dev": "cross-env VITE_ENV=example vite --config ../../../vite.config.packages.js",
     "postinstall": "patch-package",
     "lint": "lint-staged",
     "prepare": "husky install",
@@ -24,7 +30,8 @@
     ]
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "publishConfig": {
     "access": "public"
   }

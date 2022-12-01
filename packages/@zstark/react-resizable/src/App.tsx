@@ -1,3 +1,4 @@
+import React from 'react';
 import { Modal } from 'antd';
 import Lib from '.';
 
@@ -11,7 +12,7 @@ const App = () => {
           position: 'relative',
         }}
       >
-        <Lib />
+        <Lib name="123" />
       </div>
     </Modal>
   );
